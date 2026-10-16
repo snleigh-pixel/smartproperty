@@ -1,0 +1,6 @@
+{
+  "name": "Singapore URA Developer Sales Explorer & API Suite",
+  "description": "Explore, analyze, and test Singapore Urban Redevelopment Authority (URA) Private Residential Developer Sales data with interactive analytics and live API proxy runner.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
