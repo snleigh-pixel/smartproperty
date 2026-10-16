@@ -19,6 +19,14 @@ export interface DeveloperSalesRecord {
   lowestPrice: number; // PSF in SGD
   highestPrice: number; // PSF in SGD
   estimatedMonthlySalesValue?: number; // Calculated: unitsSold * avg area * medianPrice
+  latestTransactionDate?: string; // e.g. "2026-09-28" or "28 Sep 2026"
+  latestTransactionDetails?: {
+    date: string;
+    unitType?: string;
+    floorRange?: string;
+    psf?: number;
+    quantum?: number;
+  };
 }
 
 export interface UraRawRecord {
@@ -38,6 +46,8 @@ export interface UraRawRecord {
   medianPrice?: string | number;
   lowestPrice?: string | number;
   highestPrice?: string | number;
+  latestTransactionDate?: string;
+  contractDate?: string;
 }
 
 export interface UraApiResponse {

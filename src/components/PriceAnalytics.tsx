@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { DeveloperSalesRecord, MarketSegment } from '../types/ura';
-import { DISTRICT_MAP } from '../data/sampleDeveloperSales';
+import { DISTRICT_MAP, formatDisplayDate } from '../data/sampleDeveloperSales';
 import { Building2, Compass, Layers, PieChart } from 'lucide-react';
 
 interface PriceAnalyticsProps {
@@ -194,11 +194,8 @@ export const PriceAnalytics: React.FC<PriceAnalyticsProps> = ({ records, onSelec
 
                     <div className="flex items-center justify-between text-[11px] text-slate-500 mt-1.5">
                       <span className="tabular-nums font-mono">${p.medianPrice.toLocaleString()} psf</span>
-                      <span className="tabular-nums">
-                        Take-up:{' '}
-                        {p.totalUnits > 0
-                          ? `${Math.round((p.cumulativeUnitsSold / p.totalUnits) * 100)}%`
-                          : '0%'}
+                      <span className="tabular-nums text-slate-700 font-medium">
+                        Latest: {p.latestTransactionDetails?.date || formatDisplayDate(p.latestTransactionDate)}
                       </span>
                     </div>
                   </div>

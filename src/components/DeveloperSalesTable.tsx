@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ArrowUpDown, ChevronUp, ChevronDown, ChevronRight, Filter } from 'lucide-react';
+import { Search, ArrowUpDown, ChevronUp, ChevronDown, ChevronRight, Filter, Calendar } from 'lucide-react';
 import { DeveloperSalesRecord, MarketSegment } from '../types/ura';
-import { DISTRICT_MAP } from '../data/sampleDeveloperSales';
+import { DISTRICT_MAP, formatDisplayDate } from '../data/sampleDeveloperSales';
 
 interface DeveloperSalesTableProps {
   records: DeveloperSalesRecord[];
@@ -10,7 +10,7 @@ interface DeveloperSalesTableProps {
   setSelectedSegment: (seg: MarketSegment | 'ALL') => void;
 }
 
-type SortField = 'project' | 'district' | 'unitsSold' | 'unitsLaunched' | 'medianPrice' | 'takeUp' | 'unsoldUnits';
+type SortField = 'project' | 'district' | 'unitsSold' | 'unitsLaunched' | 'medianPrice' | 'takeUp' | 'unsoldUnits' | 'latestTransactionDate';
 type SortDirection = 'asc' | 'desc';
 
 export const DeveloperSalesTable: React.FC<DeveloperSalesTableProps> = ({
@@ -89,6 +89,10 @@ export const DeveloperSalesTable: React.FC<DeveloperSalesTableProps> = ({
           valA = a.unsoldUnits;
           valB = b.unsoldUnits;
           break;
+        case 'latestTransactionDate':
+          valA = a.latestTransactionDate || a.refPeriod || '';
+          valB = b.latestTransactionDate || b.refPeriod || '';
+          return sortDirection === 'asc' ? valA.localeCompare(valB) : valB.localeCompare(valA);
         case 'takeUp':
           valA = a.totalUnits > 0 ? (a.cumulativeUnitsSold / a.totalUnits) : 0;
           valB = b.totalUnits > 0 ? (b.cumulativeUnitsSold / b.totalUnits) : 0;
@@ -252,6 +256,20 @@ export const DeveloperSalesTable: React.FC<DeveloperSalesTableProps> = ({
                 </div>
               </th>
               <th
+                onClick={() => handleSort('latestTransactionDate')}
+                className="py-3 px-3 cursor-pointer hover:text-slate-900 transition-colors"
+              >
+                <div className="flex items-center gap-1">
+                  <Calendar className="w-3 h-3 text-slate-400" />
+                  <span>Latest Transaction</span>
+                  {sortField === 'latestTransactionDate' ? (
+                    sortDirection === 'asc' ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />
+                  ) : (
+                    <ArrowUpDown className="w-3 h-3 text-slate-400" />
+                  )}
+                </div>
+              </th>
+              <th
                 onClick={() => handleSort('unitsSold')}
                 className="py-3 px-3 text-right cursor-pointer hover:text-slate-900 transition-colors"
               >
@@ -327,7 +345,7 @@ export const DeveloperSalesTable: React.FC<DeveloperSalesTableProps> = ({
           <tbody className="divide-y divide-slate-200">
             {paginatedRecords.length === 0 ? (
               <tr>
-                <td colSpan={9} className="py-12 text-center text-slate-500">
+                <td colSpan={10} className="py-12 text-center text-slate-500">
                   <div className="max-w-xs mx-auto space-y-2">
                     <p className="font-medium text-slate-700">No developer sales found</p>
                     <p className="text-xs text-slate-400">
@@ -341,6 +359,9 @@ export const DeveloperSalesTable: React.FC<DeveloperSalesTableProps> = ({
                 const takeUpPct = r.totalUnits > 0
                   ? Math.round((r.cumulativeUnitsSold / r.totalUnits) * 100)
                   : 0;
+
+                const hasSales = r.unitsSold > 0;
+                const formattedDate = r.latestTransactionDetails?.date || formatDisplayDate(r.latestTransactionDate);
 
                 return (
                   <tr
@@ -369,6 +390,24 @@ export const DeveloperSalesTable: React.FC<DeveloperSalesTableProps> = ({
                         <span className="font-semibold text-slate-700">{r.marketSegment}</span>
                         <span aria-hidden="true">·</span>
                         <span className="truncate">{r.propertyType}</span>
+                      </div>
+                    </td>
+
+                    {/* Latest Transaction Date */}
+                    <td className="py-3 px-3 whitespace-nowrap">
+                      <div className="font-medium text-slate-900 tabular-nums flex items-center gap-1.5">
+                        <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${hasSales ? 'bg-emerald-500' : 'bg-slate-300'}`} />
+                        <span className="font-semibold">{formattedDate}</span>
+                      </div>
+                      <div className="text-[11px] text-slate-500 truncate max-w-[160px] pl-3">
+                        {r.latestTransactionDetails?.unitType ? (
+                          <span title={r.latestTransactionDetails.unitType}>
+                            {r.latestTransactionDetails.floorRange ? `${r.latestTransactionDetails.floorRange} ` : ''}
+                            {r.latestTransactionDetails.unitType.split('(')[0].trim()}
+                          </span>
+                        ) : (
+                          <span>Return Period {r.refPeriod}</span>
+                        )}
                       </div>
                     </td>
 

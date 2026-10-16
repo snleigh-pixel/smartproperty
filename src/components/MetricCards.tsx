@@ -1,6 +1,7 @@
 import React from 'react';
-import { TrendingUp, Layers, DollarSign, Home, CheckCircle2, BarChart2 } from 'lucide-react';
+import { TrendingUp, Layers, DollarSign, Home, CheckCircle2, BarChart2, Calendar } from 'lucide-react';
 import { DeveloperSalesRecord } from '../types/ura';
+import { formatDisplayDate } from '../data/sampleDeveloperSales';
 
 interface MetricCardsProps {
   records: DeveloperSalesRecord[];
@@ -8,6 +9,10 @@ interface MetricCardsProps {
 }
 
 export const MetricCards: React.FC<MetricCardsProps> = ({ records }) => {
+  const allDates = records
+    .map(r => r.latestTransactionDate)
+    .filter(Boolean) as string[];
+  const latestMarketDate = allDates.length > 0 ? [...allDates].sort().reverse()[0] : null;
   const totalUnitsSold = records.reduce((sum, r) => sum + r.unitsSold, 0);
   const totalUnitsLaunched = records.reduce((sum, r) => sum + r.unitsLaunched, 0);
 
@@ -48,8 +53,13 @@ export const MetricCards: React.FC<MetricCardsProps> = ({ records }) => {
         <div className="text-2xl font-bold tracking-tight text-slate-900 tabular-nums">
           {totalUnitsSold.toLocaleString()}
         </div>
-        <div className="mt-1 text-[11px] text-slate-500 flex items-center gap-1">
-          <span>Monthly developer sales</span>
+        <div className="mt-1 text-[11px] text-slate-500 flex items-center justify-between">
+          <span>Monthly sales</span>
+          {latestMarketDate && (
+            <span className="font-semibold text-emerald-700 tabular-nums">
+              Latest: {formatDisplayDate(latestMarketDate).split(' ')[0]} {formatDisplayDate(latestMarketDate).split(' ')[1]}
+            </span>
+          )}
         </div>
       </div>
 

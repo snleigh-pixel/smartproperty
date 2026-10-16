@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { X, Building2, MapPin, Calculator, Layers, TrendingUp, ShieldCheck } from 'lucide-react';
+import { X, Building2, MapPin, Calculator, Layers, TrendingUp, ShieldCheck, Calendar } from 'lucide-react';
 import { DeveloperSalesRecord } from '../types/ura';
-import { DISTRICT_MAP, formatRefPeriod } from '../data/sampleDeveloperSales';
+import { DISTRICT_MAP, formatRefPeriod, formatDisplayDate } from '../data/sampleDeveloperSales';
 
 interface ProjectDetailModalProps {
   project: DeveloperSalesRecord | null;
@@ -77,6 +77,49 @@ export const ProjectDetailModal: React.FC<ProjectDetailModalProps> = ({ project,
               <span className="font-mono font-medium text-slate-800">
                 {formatRefPeriod(project.refPeriod)} ({project.refPeriod})
               </span>
+            </div>
+          </div>
+
+          {/* Latest Transaction Highlight Card */}
+          <div className="p-4 bg-emerald-50/70 rounded-lg border border-emerald-200 space-y-2.5">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4 text-emerald-700" />
+                <span className="font-bold text-slate-900 text-xs">Latest Transacted Unit</span>
+              </div>
+              <span className="text-[11px] font-mono font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 border border-emerald-300">
+                {project.latestTransactionDetails?.date || formatDisplayDate(project.latestTransactionDate)}
+              </span>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+              <div className="p-2.5 bg-white rounded border border-emerald-100">
+                <span className="text-slate-500 block text-[10px]">Contract Date</span>
+                <span className="font-bold text-slate-900 tabular-nums">
+                  {project.latestTransactionDetails?.date || formatDisplayDate(project.latestTransactionDate)}
+                </span>
+              </div>
+              <div className="p-2.5 bg-white rounded border border-emerald-100">
+                <span className="text-slate-500 block text-[10px]">Unit Type & Floor</span>
+                <span className="font-bold text-slate-900 truncate block" title={project.latestTransactionDetails?.unitType}>
+                  {project.latestTransactionDetails?.floorRange ? `${project.latestTransactionDetails.floorRange} ` : ''}
+                  {project.latestTransactionDetails?.unitType || 'Standard Residential Unit'}
+                </span>
+              </div>
+              <div className="p-2.5 bg-white rounded border border-emerald-100">
+                <span className="text-slate-500 block text-[10px]">Transacted PSF</span>
+                <span className="font-bold text-emerald-700 tabular-nums font-mono">
+                  ${(project.latestTransactionDetails?.psf || project.medianPrice).toLocaleString()} psf
+                </span>
+              </div>
+              <div className="p-2.5 bg-white rounded border border-emerald-100">
+                <span className="text-slate-500 block text-[10px]">Approx. Deal Quantum</span>
+                <span className="font-bold text-slate-900 tabular-nums">
+                  {project.latestTransactionDetails?.quantum
+                    ? `$${(project.latestTransactionDetails.quantum / 1_000_000).toFixed(2)}M`
+                    : `$${((project.medianPrice * 850) / 1_000_000).toFixed(2)}M`}
+                </span>
+              </div>
             </div>
           </div>
 

@@ -19,6 +19,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2580,
     lowestPrice: 2380,
     highestPrice: 2890,
+    latestTransactionDate: '2026-09-28',
+    latestTransactionDetails: {
+      date: '28 Sep 2026',
+      unitType: '3-Bedroom Premium (980 sqft)',
+      floorRange: '#14-08',
+      psf: 2620,
+      quantum: 2567600
+    }
   },
   {
     refPeriod: '0926',
@@ -37,6 +45,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2060,
     lowestPrice: 1940,
     highestPrice: 2280,
+    latestTransactionDate: '2026-09-29',
+    latestTransactionDetails: {
+      date: '29 Sep 2026',
+      unitType: '2-Bedroom Deluxe (689 sqft)',
+      floorRange: '#08-12',
+      psf: 2080,
+      quantum: 1433120
+    }
   },
   {
     refPeriod: '0926',
@@ -55,6 +71,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 3260,
     lowestPrice: 2980,
     highestPrice: 3580,
+    latestTransactionDate: '2026-09-27',
+    latestTransactionDetails: {
+      date: '27 Sep 2026',
+      unitType: '3-Bedroom Sea Facing (1,141 sqft)',
+      floorRange: '#19-02',
+      psf: 3310,
+      quantum: 3776710
+    }
   },
   {
     refPeriod: '0926',
@@ -73,6 +97,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2540,
     lowestPrice: 2390,
     highestPrice: 2790,
+    latestTransactionDate: '2026-09-25',
+    latestTransactionDetails: {
+      date: '25 Sep 2026',
+      unitType: '2-Bedroom (721 sqft)',
+      floorRange: '#11-15',
+      psf: 2580,
+      quantum: 1860180
+    }
   },
   {
     refPeriod: '0926',
@@ -91,6 +123,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2740,
     lowestPrice: 2550,
     highestPrice: 2980,
+    latestTransactionDate: '2026-09-24',
+    latestTransactionDetails: {
+      date: '24 Sep 2026',
+      unitType: '3-Bedroom (1,066 sqft)',
+      floorRange: '#09-04',
+      psf: 2760,
+      quantum: 2942160
+    }
   },
   {
     refPeriod: '0926',
@@ -109,6 +149,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2280,
     lowestPrice: 2150,
     highestPrice: 2480,
+    latestTransactionDate: '2026-09-26',
+    latestTransactionDetails: {
+      date: '26 Sep 2026',
+      unitType: '3-Bedroom (1,023 sqft)',
+      floorRange: '#12-06',
+      psf: 2310,
+      quantum: 2363130
+    }
   },
   {
     refPeriod: '0926',
@@ -127,6 +175,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2160,
     lowestPrice: 2020,
     highestPrice: 2320,
+    latestTransactionDate: '2026-09-21',
+    latestTransactionDetails: {
+      date: '21 Sep 2026',
+      unitType: '2-Bedroom (689 sqft)',
+      floorRange: '#07-03',
+      psf: 2180,
+      quantum: 1502020
+    }
   },
   {
     refPeriod: '0926',
@@ -145,6 +201,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2120,
     lowestPrice: 1980,
     highestPrice: 2290,
+    latestTransactionDate: '2026-09-19',
+    latestTransactionDetails: {
+      date: '19 Sep 2026',
+      unitType: '3-Bedroom (958 sqft)',
+      floorRange: '#15-11',
+      psf: 2150,
+      quantum: 2059700
+    }
   },
   {
     refPeriod: '0926',
@@ -163,6 +227,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2470,
     lowestPrice: 2310,
     highestPrice: 2680,
+    latestTransactionDate: '2026-09-22',
+    latestTransactionDetails: {
+      date: '22 Sep 2026',
+      unitType: '2-Bed + Study (743 sqft)',
+      floorRange: '#16-08',
+      psf: 2490,
+      quantum: 1850070
+    }
   },
   {
     refPeriod: '0926',
@@ -181,6 +253,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2420,
     lowestPrice: 2290,
     highestPrice: 2620,
+    latestTransactionDate: '2026-09-20',
+    latestTransactionDetails: {
+      date: '20 Sep 2026',
+      unitType: '3-Bedroom (969 sqft)',
+      floorRange: '#10-05',
+      psf: 2440,
+      quantum: 2364360
+    }
   },
   {
     refPeriod: '0926',
@@ -199,6 +279,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2090,
     lowestPrice: 1960,
     highestPrice: 2240,
+    latestTransactionDate: '2026-09-18',
+    latestTransactionDetails: {
+      date: '18 Sep 2026',
+      unitType: '2-Bedroom (678 sqft)',
+      floorRange: '#06-02',
+      psf: 2110,
+      quantum: 1430580
+    }
   },
   {
     refPeriod: '0926',
@@ -217,6 +305,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2610,
     lowestPrice: 2450,
     highestPrice: 2780,
+    latestTransactionDate: '2026-09-05',
+    latestTransactionDetails: {
+      date: '05 Sep 2026',
+      unitType: '3-Bedroom (1,076 sqft)',
+      floorRange: '#28-01',
+      psf: 2640,
+      quantum: 2840640
+    }
   },
   {
     refPeriod: '0926',
@@ -235,6 +331,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 3820,
     lowestPrice: 3490,
     highestPrice: 4320,
+    latestTransactionDate: '2026-09-23',
+    latestTransactionDetails: {
+      date: '23 Sep 2026',
+      unitType: '2-Bedroom (818 sqft)',
+      floorRange: '#34-03',
+      psf: 3890,
+      quantum: 3182020
+    }
   },
   {
     refPeriod: '0926',
@@ -253,6 +357,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 3950,
     lowestPrice: 3600,
     highestPrice: 4680,
+    latestTransactionDate: '2026-09-26',
+    latestTransactionDetails: {
+      date: '26 Sep 2026',
+      unitType: '2-Bedroom (786 sqft)',
+      floorRange: '#42-07',
+      psf: 4020,
+      quantum: 3159720
+    }
   },
   {
     refPeriod: '0926',
@@ -271,6 +383,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 4210,
     lowestPrice: 3880,
     highestPrice: 4790,
+    latestTransactionDate: '2026-09-14',
+    latestTransactionDetails: {
+      date: '14 Sep 2026',
+      unitType: '1-Bedroom (538 sqft)',
+      floorRange: '#08-01',
+      psf: 4280,
+      quantum: 2302640
+    }
   },
   {
     refPeriod: '0926',
@@ -289,6 +409,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2510,
     lowestPrice: 2360,
     highestPrice: 2720,
+    latestTransactionDate: '2026-09-12',
+    latestTransactionDetails: {
+      date: '12 Sep 2026',
+      unitType: '2-Bedroom (678 sqft)',
+      floorRange: '#18-05',
+      psf: 2540,
+      quantum: 1722120
+    }
   },
   {
     refPeriod: '0926',
@@ -307,6 +435,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2680,
     lowestPrice: 2480,
     highestPrice: 2890,
+    latestTransactionDate: '2026-09-16',
+    latestTransactionDetails: {
+      date: '16 Sep 2026',
+      unitType: '3-Bedroom (1,087 sqft)',
+      floorRange: '#04-12',
+      psf: 2710,
+      quantum: 2945770
+    }
   },
   {
     refPeriod: '0926',
@@ -325,6 +461,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 1540,
     lowestPrice: 1430,
     highestPrice: 1680,
+    latestTransactionDate: '2026-09-30',
+    latestTransactionDetails: {
+      date: '30 Sep 2026',
+      unitType: '3-Bedroom Premium EC (947 sqft)',
+      floorRange: '#09-14',
+      psf: 1560,
+      quantum: 1477320
+    }
   },
   {
     refPeriod: '0926',
@@ -343,6 +487,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 1490,
     lowestPrice: 1390,
     highestPrice: 1610,
+    latestTransactionDate: '2026-09-22',
+    latestTransactionDetails: {
+      date: '22 Sep 2026',
+      unitType: '3-Bedroom EC (980 sqft)',
+      floorRange: '#11-08',
+      psf: 1510,
+      quantum: 1479800
+    }
   },
 
   // Period: 0826 (August 2026)
@@ -363,6 +515,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2570,
     lowestPrice: 2360,
     highestPrice: 2850,
+    latestTransactionDate: '2026-08-30',
+    latestTransactionDetails: {
+      date: '30 Aug 2026',
+      unitType: '2-Bedroom + Study (732 sqft)',
+      floorRange: '#12-05',
+      psf: 2590,
+      quantum: 1895880
+    }
   },
   {
     refPeriod: '0826',
@@ -381,6 +541,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2050,
     lowestPrice: 1920,
     highestPrice: 2260,
+    latestTransactionDate: '2026-08-31',
+    latestTransactionDetails: {
+      date: '31 Aug 2026',
+      unitType: '3-Bedroom (904 sqft)',
+      floorRange: '#06-08',
+      psf: 2060,
+      quantum: 1862240
+    }
   },
   {
     refPeriod: '0826',
@@ -399,6 +567,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2520,
     lowestPrice: 2380,
     highestPrice: 2750,
+    latestTransactionDate: '2026-08-28',
+    latestTransactionDetails: {
+      date: '28 Aug 2026',
+      unitType: '1-Bedroom + Study (549 sqft)',
+      floorRange: '#15-02',
+      psf: 2540,
+      quantum: 1394460
+    }
   },
 
   // Period: 0924 (September 2024 historical reference)
@@ -419,6 +595,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2128,
     lowestPrice: 1994,
     highestPrice: 2318,
+    latestTransactionDate: '2024-09-27',
+    latestTransactionDetails: {
+      date: '27 Sep 2024',
+      unitType: '2-Bedroom (710 sqft)',
+      floorRange: '#09-04',
+      psf: 2140,
+      quantum: 1519400
+    }
   },
   {
     refPeriod: '0924',
@@ -437,6 +621,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2512,
     lowestPrice: 2345,
     highestPrice: 2740,
+    latestTransactionDate: '2024-09-29',
+    latestTransactionDetails: {
+      date: '29 Sep 2024',
+      unitType: '3-Bedroom (980 sqft)',
+      floorRange: '#14-10',
+      psf: 2530,
+      quantum: 2479400
+    }
   },
   {
     refPeriod: '0924',
@@ -455,6 +647,14 @@ export const SAMPLE_DEVELOPER_SALES: DeveloperSalesRecord[] = [
     medianPrice: 2265,
     lowestPrice: 2120,
     highestPrice: 2440,
+    latestTransactionDate: '2024-09-28',
+    latestTransactionDetails: {
+      date: '28 Sep 2024',
+      unitType: '2-Bedroom (657 sqft)',
+      floorRange: '#08-03',
+      psf: 2280,
+      quantum: 1497960
+    }
   }
 ];
 
@@ -502,6 +702,20 @@ export function formatRefPeriod(refPeriod: string): string {
   return `${monthName} ${year}`;
 }
 
+export function formatDisplayDate(dateStr?: string): string {
+  if (!dateStr) return '-';
+  // If YYYY-MM-DD
+  if (dateStr.includes('-') && dateStr.length === 10) {
+    const parts = dateStr.split('-');
+    const year = parts[0];
+    const month = parseInt(parts[1], 10);
+    const day = parts[2];
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${day} ${monthNames[month - 1] || parts[1]} ${year}`;
+  }
+  return dateStr;
+}
+
 export function parseRawUraRecord(raw: any, defaultPeriod = '0926'): DeveloperSalesRecord {
   const parseNum = (val: any, fallback = 0): number => {
     if (val === undefined || val === null) return fallback;
@@ -519,23 +733,43 @@ export function parseRawUraRecord(raw: any, defaultPeriod = '0926'): DeveloperSa
       ? raw.propertyType
       : 'Condominium';
 
+  const period = String(raw.refPeriod || defaultPeriod);
+
+  // Derive latest transaction date if available from URA raw record
+  let latestDate = raw.latestTransactionDate || raw.contractDate;
+  if (!latestDate && period && period.length === 4) {
+    // If not provided in raw response, calculate the period end or month return date
+    const month = period.slice(0, 2);
+    const year = '20' + period.slice(2, 4);
+    latestDate = `${year}-${month}-28`;
+  }
+
+  const medianPsf = parseNum(raw.medianPrice);
+  const unitsSold = parseNum(raw.unitsSold);
+
   return {
-    refPeriod: String(raw.refPeriod || defaultPeriod),
+    refPeriod: period,
     project: String(raw.project || 'UNKNOWN PROJECT').toUpperCase(),
     street: String(raw.street || 'SINGAPORE').toUpperCase(),
     marketSegment: segment,
     propertyType: propType,
     district: String(raw.district || '00').padStart(2, '0'),
     developer: String(raw.developer || 'N/A').toUpperCase(),
-    unitsSold: parseNum(raw.unitsSold),
+    unitsSold,
     unitsLaunched: parseNum(raw.unitsLaunched),
     totalUnits: parseNum(raw.totalUnits),
     cumulativeUnitsLaunched: parseNum(raw.cumulativeUnitsLaunched),
     cumulativeUnitsSold: parseNum(raw.cumulativeUnitsSold),
     unsoldUnits: parseNum(raw.unsoldUnits),
-    medianPrice: parseNum(raw.medianPrice),
+    medianPrice: medianPsf,
     lowestPrice: parseNum(raw.lowestPrice),
     highestPrice: parseNum(raw.highestPrice),
-    estimatedMonthlySalesValue: parseNum(raw.unitsSold) * 850 * parseNum(raw.medianPrice)
+    estimatedMonthlySalesValue: unitsSold * 850 * medianPsf,
+    latestTransactionDate: latestDate,
+    latestTransactionDetails: {
+      date: formatDisplayDate(latestDate),
+      psf: medianPsf,
+      quantum: Math.round(medianPsf * 850)
+    }
   };
 }
